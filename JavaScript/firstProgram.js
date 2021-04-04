@@ -1,0 +1,3 @@
+function checkvalue() {
+  alert("testing");
+}

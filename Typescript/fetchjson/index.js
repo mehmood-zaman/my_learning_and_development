@@ -1,0 +1,12 @@
+"use strict";
+exports.__esModule = true;
+var axios_1 = require("axios");
+var url = "https://jsonplaceholder.typicode.com/posts/1";
+axios_1["default"].get(url).then(function (response) {
+    console.log(response.data);
+    var todo = response.data;
+    var id = todo.ID;
+    var completed = todo.Completed;
+    var title = todo.Title;
+    console.log("\n  id: " + id + "\n  completed: " + completed + "\n  title: " + title + "\n  ");
+});
