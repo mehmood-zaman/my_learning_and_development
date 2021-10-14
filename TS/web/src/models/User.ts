@@ -1,15 +1,17 @@
-import axios,{AxiosResponse} from 'axios';
+
 import {Eventing} from './Eventing'
-import config from '../../config.json'
-const baseURL = config.baseURL;
-interface UserProps {
+import { Sync } from './Sync';
+
+export interface UserProps {
   id?:number;
   name?: string;
   age?: number;
 }
 
 export class User {
-  events: Eventing = new Eventing();
+  public events: Eventing = new Eventing();
+  public sync: Sync<UserProps> = new Sync<UserProps>();
+
 
   constructor(private data: UserProps) {}
 
@@ -23,18 +25,5 @@ export class User {
 
 
 
-  fetch(): void{
-    axios.get(`/${this.get('id')}`).
-    then((response:AxiosResponse):void => {
-      this.set(response.data)
-    })
-  }
-  save(): void{
-    if(this.get('id')){
-      axios.put(`${baseURL}/${this.get('id')}`,this.data)
 
-    }else{
-      axios.post(baseURL,this.data)
-    }
-  }
 }
