@@ -1,18 +1,9 @@
-import axios from 'axios';
-import { User } from "./models/User";
+import { User } from './models/User';
 
-console.log("Hi there!");
+const user = new User({ id: 1, name: 'newer name', age: 0 });
 
-const user = new User({ id:1 });
+user.on('save', () => {
+  console.log(user);
+});
 
-user.set({name:"New Name",age:5555});
-
-user.events.on("change",()=>{
-    console.log("Change event");
-})
-
-user.events.trigger("change");
-user.save()
-
-
-
+user.save();
