@@ -11,7 +11,7 @@ interface HasId {
 }
 
 interface Event {
-  on(eventName: string, callback: () => {}): void;
+  on(eventName: string, callback: () => void): void;
   trigger(eventName: string): void;
 }
 
@@ -27,17 +27,10 @@ export class Model<T extends HasId> {
     private sync: Sync<T>
   ) {}
 
-  get on() {
-    return this.events.on;
-  }
+  on = this.events.on;
 
-  get trigger() {
-    return this.events.trigger;
-  }
-
-  get get() {
-    return this.attributes.get;
-  }
+  trigger = this.events.trigger;
+  get = this.attributes.get;
 
   set(update: T): void {
     this.attributes.set(update);
