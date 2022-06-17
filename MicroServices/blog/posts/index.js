@@ -1,7 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const { randomBytes } = require("crypto");
-
+const axios = require("axios")
 const app = express();
 
 app.use(bodyParser.json());
@@ -19,4 +19,12 @@ app.post("/posts", (req, res) => {
     id,
     title,
   };
+
+  axios.post('http://localhost:4005/events',{
+    type:'post-created',
+    data:{
+      id,
+      title,
+    }
+  })
 });
