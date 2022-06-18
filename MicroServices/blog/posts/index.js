@@ -1,7 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const { randomBytes } = require("crypto");
-const axios = require("axios")
+const axios = require("axios");
 const app = express();
 
 app.use(bodyParser.json());
@@ -20,11 +20,21 @@ app.post("/posts", (req, res) => {
     title,
   };
 
-  axios.post('http://localhost:4005/events',{
-    type:'post-created',
-    data:{
+  axios.post("http://localhost:4005/events", {
+    type: "PostCreated",
+    data: {
       id,
       title,
-    }
-  })
+    },
+  });
+});
+
+app.post("/events", (req, res) => {
+  console.log("Event is triggered" + req.body.event);
+
+  res.send({});
+});
+
+app.listen(4000, () => {
+  console.log("listening on port 4000");
 });
