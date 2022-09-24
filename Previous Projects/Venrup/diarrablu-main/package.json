@@ -1,0 +1,133 @@
+{
+  "name": "diarrablu-design",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@auth0/auth0-react": "^1.5.0",
+    "@material-ui/core": "^4.11.4",
+    "@material-ui/icons": "^4.11.2",
+    "autoprefixer": "7.1.6",
+    "axios": "^0.21.1",
+    "babel-core": "6.26.0",
+    "babel-jest": "^25.0.0",
+    "babel-preset-react-app": "^3.1.0",
+    "babel-runtime": "6.26.0",
+    "case-sensitive-paths-webpack-plugin": "2.1.1",
+    "chalk": "1.1.3",
+    "cloudinary": "^1.26.1",
+    "cloudinary-react": "^1.3.1",
+    "css-loader": "^2.1.1",
+    "dotenv": "4.0.0",
+    "eslint": "4.18.2",
+    "eslint-config-react-app": "^2.0.1",
+    "eslint-loader": "2.1.2",
+    "eslint-plugin-flowtype": "2.39.1",
+    "eslint-plugin-import": "2.8.0",
+    "eslint-plugin-jsx-a11y": "5.1.1",
+    "eslint-plugin-react": "7.4.0",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "file-loader": "1.1.5",
+    "fs-extra": "3.0.1",
+    "html2canvas": "^1.0.0-rc.7",
+    "jest": "24.5.0",
+    "material-ui": "^0.20.2",
+    "object-assign": "4.1.1",
+    "offline-plugin": "^5.0.7",
+    "postcss-flexbugs-fixes": "3.2.0",
+    "postcss-loader": "2.0.8",
+    "promise": "8.0.1",
+    "raf": "3.4.1",
+    "react": "^16.13.1",
+    "react-component-export-image": "^1.0.6",
+    "react-dom": "^16.13.1",
+    "react-dropzone": "^11.2.0",
+    "react-redux": "^7.2.1",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "3.4.3",
+    "redux": "^4.0.5",
+    "repng": "^4.0.1",
+    "rxjs": "^5.5.6",
+    "style-loader": "0.19.0",
+    "superagent": "^3.8.3",
+    "sw-precache-webpack-plugin": "0.11.5",
+    "uglifyjs-webpack-plugin": "2.2.0",
+    "upgrade": "^1.1.0",
+    "url-loader": "0.6.2",
+    "use-react-screenshot": "^1.0.2",
+    "webpack-dev-server": "3.2.1",
+    "webpack-manifest-plugin": "^2.2.0",
+    "whatwg-fetch": "2.0.3"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx,mjs}"
+    ],
+    "setupFiles": [
+      "<rootDir>/config/polyfills.js"
+    ],
+    "testMatch": [
+      "<rootDir>/src/**/__tests__/**/*.{js,jsx,mjs}",
+      "<rootDir>/src/**/?(*.)(spec|test).{js,jsx,mjs}"
+    ],
+    "testEnvironment": "node",
+    "testURL": "http://localhost",
+    "transform": {
+      "^.+\\.(js|jsx|mjs)$": "<rootDir>/node_modules/babel-jest",
+      "^.+\\.css$": "<rootDir>/config/jest/cssTransform.js",
+      "^(?!.*\\.(js|jsx|mjs|css|json)$)": "<rootDir>/config/jest/fileTransform.js"
+    },
+    "transformIgnorePatterns": [
+      "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|mjs)$"
+    ],
+    "moduleNameMapper": {
+      "^react-native$": "react-native-web"
+    },
+    "moduleFileExtensions": [
+      "web.js",
+      "mjs",
+      "js",
+      "json",
+      "web.jsx",
+      "jsx",
+      "node"
+    ]
+  },
+  "babel": {
+    "presets": [
+      "react-app"
+    ]
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "@babel/preset-env": "^7.11.5",
+    "@babel/preset-react": "^7.10.4",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "html-loader": "^1.3.1",
+    "html-webpack-plugin": "^4.5.0",
+    "mini-css-extract-plugin": "^0.11.2",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12"
+  }
+}

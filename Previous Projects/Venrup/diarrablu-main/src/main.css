@@ -1,0 +1,235 @@
+#root, .App, body, html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding:0 !important
+}
+
+.position-input{
+  display: block!important;
+}
+
+.upload_link {
+    color: #000;
+    border: 1px solid #aaa;
+    background-color: #e0e0e0;
+    font-size: 18px;
+    padding: 5px 10px;
+    width: 250px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px;
+    cursor:pointer;
+}
+.blend {
+  position: relative;
+  min-width: 100%;
+  min-height: 100%;
+  -webkit-mask-image: url('https://cdn.glitch.com/36f6b162-1d74-4754-8c4a-8326b3e8a9d1%2Fmodel_mask_final.png?v=1600660674399') ;
+  mask-image: url('https://cdn.glitch.com/36f6b162-1d74-4754-8c4a-8326b3e8a9d1%2Fmodel_mask_final.png?v=1600660674399');
+  -webkit-mask-repeat: no-repeat;
+  mask-size: contain;
+  background-blend-mode: multiply;
+  background-repeat: no-repeat, no-repeat;
+  z-index:5;
+  background-position: 50% 50%, center center;
+  mask-position:center;
+  -webkit-mask-position:center;
+
+
+}
+
+.pattern {
+  position: absolute;
+  min-width: 330px;
+  min-height: 400px;
+  /* -webkit-mask-image: url('https://cdn.glitch.com/36f6b162-1d74-4754-8c4a-8326b3e8a9d1%2Fmodel_mask_final.png?v=1600660674399') ; */
+  /* mask-image: url('https://cdn.glitch.com/36f6b162-1d74-4754-8c4a-8326b3e8a9d1%2Fmodel_mask_final.png?v=1600660674399'); */
+  -webkit-mask-repeat: no-repeat;
+  mask-size: contain;
+  mix-blend-mode: multiply;
+  /* background-blend-mode: multiply; */
+  /* background-repeat: no-repeat, no-repeat; */
+  z-index:5;
+  /* background-position: 50% 50%, center center; */
+  mask-position:center;
+  -webkit-mask-position:center;
+
+
+}
+
+.pattern:before{
+  content: "";
+  position: absolute;
+  min-width: 330px;
+  min-height: 400px;
+  /* transform: rotate(-30deg) scale(1.2); */
+
+  /* background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/background.png); */
+  /* background-color: red; */
+  /* transform: rotate(-30deg); */
+  /* background-position: center; */
+  /* background-size: 5; */
+
+  /* background-image: attr(data-content); */
+}
+
+.ghost {
+  position: relative;
+  min-width: 330px;
+  min-height: 400px;
+  /* -webkit-mask-image: url('https://cdn.glitch.com/36f6b162-1d74-4754-8c4a-8326b3e8a9d1%2Fmodel_mask_final.png?v=1600660674399') ; */
+  /* mask-image: url('https://cdn.glitch.com/36f6b162-1d74-4754-8c4a-8326b3e8a9d1%2Fmodel_mask_final.png?v=1600660674399'); */
+  /* -webkit-mask-repeat: no-repeat; */
+  /* mask-size: contain; */
+  /* background-blend-mode: multiply; */
+  background-repeat: no-repeat;
+  z-index:4;
+  background-position: center center;
+  /* mask-position:center; */
+  /* -webkit-mask-position:center; */
+}
+.covers {
+  min-width: 330px;
+  min-height: 400px;
+  position: absolute;
+  z-index:6;
+  background-position: center;
+  background-repeat:no-repeat;
+
+}
+
+.collar{
+/*  display:absolute; */
+ position: absolute;
+ width: 100%;
+ height: 100%;
+ background-image: url("https://cdn.glitch.com/36f6b162-1d74-4754-8c4a-8326b3e8a9d1%2Fmodel_2.png?v=1600647689785");
+ background-size:contain;
+ background-repeat: no-repeat;
+}
+
+.actions{
+  display: flex;
+  justify-content: space-between;
+  padding:20px 10%;
+  /* padding-left: 18%; */
+  align-items: flex-start;
+  flex-wrap: wrap;
+
+
+}
+.slider-label{
+  text-align:center;
+}
+.control-columns{
+  /* padding-left: 20px; */
+  display:flex;
+  flex-direction: column;
+  min-width: 350px;
+  justify-content: flex-start;
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+.tile-input{
+  max-width: 150px;
+}
+.size{
+  /* padding-left: 20px; */
+  display:flex;
+  min-width: 300px;
+}
+
+.control-labels{
+  margin-bottom:30px;
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.model-container{
+  margin-top: 10%;
+  /* padding-left: 10%; */
+  display: flex;
+  flex-wrap:wrap;
+  padding:0 10%;
+  flex-direction: row;
+  justify-content:space-between;
+}
+.model-name{
+  margin-top: 10px;
+  color:lightgrey;
+  text-transform: capitalize;
+  font-size: 12px;
+}
+.ghost-grid{
+  display: flex;
+  flex-direction: column;
+  margin-bottom:30px;
+  margin-right: 0px;
+
+}
+
+.backdrop {
+    background-color: lightgrey;
+}
+.photos{
+  display: flex;
+
+  justify-content: center;
+}
+.photoList{
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+}
+.model{
+
+  align-items: center;
+  min-width: 350px;
+  min-height: 400px;
+  display: flex;
+  justify-content:center;
+  /* border: 10px solid grey; */
+  /* outline-color: grey;
+  outline-style: solid;
+  outline-width:30px; */
+  display: flex;
+  padding:20px 0;
+
+  /* margin-left: 15px; */
+  /* background-color: none; */
+}
+
+.upload_link {
+    color: black;
+    border: 0px solid #aaa;
+    background-color: #f1e4d8;
+    font-size: 16px;
+    padding: 5px 30px;
+    min-width: 200px;
+    border-radius: 30px;
+    font-weight: 300;
+    text-align: center;
+    text-decoration: none;
+    margin: 0px;
+    cursor:pointer;
+}
+
+.upload-column{
+  min-width: 200px;
+}
+
+.MuiSlider-thumb{
+  background-color: grey !important;
+}
+
+
+.MuiSlider-root{
+  color: grey !important;
+}
+
+.MuiSlider-thumb.MuiSlider-active {
+  box-shadow: 0px 0px 0px 10px rgb(0 0 0 / 10%) !important;
+    background-color: grey !important;
+}
